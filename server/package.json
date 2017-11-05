@@ -1,0 +1,38 @@
+{
+  "name": "andetal-assessment",
+  "version": "1.0.0",
+  "description": "Andela assessment for ALC 2.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniekanoffiong/andela-assessment.git"
+  },
+  "keywords": [
+    "andela",
+    "api",
+    "nodejs",
+    "alc2.0"
+  ],
+  "author": "Offiong Aniekan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aniekanoffiong/andela-assessment/issues"
+  },
+  "homepage": "https://github.com/aniekanoffiong/andela-assessment#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.12.4",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
