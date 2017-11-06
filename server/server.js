@@ -24,6 +24,9 @@ app.use(function (req, res, next) {
 
 // Routes
 app.use('/api', require('./routes/api'));
+app.use('*', function(req, res) {
+    res.sendFile( __dirname + '/public/dist/index.html');
+});
 
 // Start server
 app.listen(config.port);

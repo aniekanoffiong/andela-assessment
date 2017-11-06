@@ -153,16 +153,18 @@ var StudentsController = {
     },
 
     determineFile(currentFile, uploadfile = false) {
-        var photoString = currentFile.split('/');
-        var fileToDelete = './public/' + photoString[3] + '/' + photoString[4];
-        if (uploadfile == false) {
-            StudentsController.deleteFile(fileToDelete);
-        } else {
-            if (uploadfile) {
+        if (currentFile) {
+            var photoString = currentFile.split('/');
+            var fileToDelete = './public/' + photoString[3] + '/' + photoString[4];
+            if (uploadfile == false) {
                 StudentsController.deleteFile(fileToDelete);
-                return StudentsController.resolveFileName(uploadfile);
             } else {
-                return currentFile;
+                if (uploadfile) {
+                    StudentsController.deleteFile(fileToDelete);
+                    return StudentsController.resolveFileName(uploadfile);
+                } else {
+                    return currentFile;
+                }
             }
         }
     },
@@ -180,7 +182,6 @@ var StudentsController = {
             }
         });
     }
-
 }
 
 module.exports = StudentsController;
